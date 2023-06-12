@@ -66,6 +66,7 @@ header {
 
 header nav ul li {
   list-style-type: none;
+  display: inline;
 }
 
 header nav ul li a {
@@ -83,16 +84,23 @@ header nav ul li a:hover {
 form {
   border: 2px solid #ff385c;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 form label {
+  align-items: left;
   font-weight: bold;
+
 }
 
 form select,
 form input {
+  align-items: right;
   margin-bottom: 20px;
   width: 180px;
+
 }
 
 form button {
@@ -102,6 +110,12 @@ form button {
   font-size: 24px;
   padding: 15px;
   width: 100%;
+}
+
+
+.inputs{
+  display: flex;
+  flex-direction: column;
 }
 
 /* -------  Footer ------- */
@@ -117,3 +131,12 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 600px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+
+}
